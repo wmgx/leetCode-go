@@ -1,0 +1,2 @@
+用go语言刷leetCode主要是熟悉go语言语法
+从easy题开始

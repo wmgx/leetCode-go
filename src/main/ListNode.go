@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ListNode struct {
 	Val  int
@@ -28,4 +30,15 @@ func printList(head *ListNode) {
 		next = next.Next
 	}
 	fmt.Println()
+}
+func reverse(list *ListNode) *ListNode {
+	var head = new(ListNode)
+
+	for list != nil {
+		var next = list.Next
+		list.Next = head.Next
+		head.Next = list
+		list = next
+	}
+	return head.Next
 }
